@@ -8,7 +8,7 @@
 module.exports = {
   mode: 'spa', // or 'universal'
   head: {
-    title: 'helloworld'
+    title: require("../../package.json").name
   },
   loading: false,
   plugins: [
@@ -18,8 +18,17 @@ module.exports = {
   ],
   buildModules: [
     '@nuxt/typescript-build',
+    '@nuxtjs/vuetify',
   ],
   modules: [
     
   ],
+
+  vuetify: {
+    customVariables: ["~/assets/scss/abstracts/_variables.scss"],
+    treeShake: true,
+    options: {
+      customProperties: true,
+    },
+  },
 };
