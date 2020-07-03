@@ -2,21 +2,8 @@
   <div class="e-nuxt-container">
     <div class="e-nuxt-content">
       <div class="e-nuxt-logo">
-        <img style="max-width: 100%;" src="~assets/electron-nuxt.png">
-      </div>
-      <div class="e-nuxt-system-info">
-        <system-information />
-      </div>
-    </div>
-    <div class="e-nuxt-links">
-      <div class="e-nuxt-button" @click="openURL('https://github.com/michalzaq12/electron-nuxt')">
-        Github
-      </div>
-      <div class="e-nuxt-button" @click="openURL('https://nuxtjs.org/guide')">
-        Nuxt.js
-      </div>
-      <div class="e-nuxt-button" @click="openURL('https://electronjs.org/docs')">
-        Electron.js
+        <img style="max-width: 50%;" src="~assets/logo.jpg">
+        <h1>fileDoot</h1>
       </div>
     </div>
   </div>
@@ -24,11 +11,19 @@
 
 <script>
 import { remote } from 'electron'
-import SystemInformation from '@/components/SystemInformation.vue'
 
 export default {
+  // head () {
+  //   return {
+  //     title: "FileDoot",
+  //     meta: [
+  //       // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+  //       { hid: 'description', name: 'description', content: 'My custom description' }
+  //     ]
+  //   }
+  // }
+  // ,
   components: {
-    SystemInformation
   },
   data () {
     return {
@@ -60,6 +55,9 @@ export default {
 
 .e-nuxt-logo{
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .e-nuxt-system-info {
