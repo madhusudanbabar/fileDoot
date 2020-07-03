@@ -35,7 +35,8 @@ app.on('ready', () => {
     }
   })
   menu.append(refreshButton)
-  Menu.setApplicationMenu(menu)
+  // KRYPTON : disabled default navigation menu
+  Menu.setApplicationMenu(null)
 })
 
 mainWinHandler.onCreated(browserWindow => {
